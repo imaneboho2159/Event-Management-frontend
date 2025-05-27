@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {EventCardComponent} from './shared/event-card/event-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, EventCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
