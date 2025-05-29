@@ -15,6 +15,9 @@ export interface Event {
   providedIn: 'root'
 })
 export class EventService {
+  searchEvents(query: string): any {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:8080/api/events';
 
   constructor(private http: HttpClient) {}

@@ -3,12 +3,12 @@ import { EventCardComponent } from './shared/event-card/event-card.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ADMIN_ROUTES } from './admin/admin.routes';
+import { HomeComponent } from './client/home/home.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/admin/events',
-        pathMatch: 'full'
+        component: HomeComponent
     },
     {
         path: 'login',
@@ -18,5 +18,8 @@ export const routes: Routes = [
         path: 'register',
         component: RegisterComponent
     },
-    ...ADMIN_ROUTES
+    {
+        path: 'admin',
+        children: ADMIN_ROUTES
+    }
 ];
